@@ -10,7 +10,11 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 
+# This is because docker name does not match github username
+
+REPO=`echo $TRAVIS_REPO_SLUG | cut -f2 -d "/"`
+
 echo "Step 2: Build"
-docker build -f Dockerfile -t mudpuppy/cicd-buzz:$TAG .
+docker build -f Dockerfile -t $DOCKER_USER/$REPO:$TAG .
 echo "Step 3: Push"
-docker push mudpuppy/cicd-buzz:$TAG
+docker push mudpuppy/$REPO:$TAG
