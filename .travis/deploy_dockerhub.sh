@@ -11,6 +11,6 @@ else
 fi
 
 echo "Step 2: Build"
-docker build -f Dockerfile -t cicd-buzz:$TAG .
+docker build -f Dockerfile -t mudpuppy/cicd-buzz:$TAG .
 echo "Step 3: Push"
-docker push cicd-buzz:$TAG
+docker push mudpuppy/cicd-buzz:$TAG
