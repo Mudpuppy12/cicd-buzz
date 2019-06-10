@@ -13,4 +13,4 @@ fi
 echo "Step 2: Build"
 docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
 echo "Step 3: Push"
-docker push $TRAVIS_REPO_SLUG:$TAG
+docker push $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG
