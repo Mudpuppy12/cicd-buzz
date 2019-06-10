@@ -13,4 +13,4 @@ fi
 echo "Step 2: Build"
 docker build -f Dockerfile -t cicd-buzz:$TAG .
 echo "Step 3: Push"
-docker push $DOCKER_USER/cicd-buzz:$TAG
+docker push cicd-buzz:$TAG
